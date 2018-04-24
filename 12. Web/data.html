@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data</title>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-1"></div>
+                <a class="navbar-brand" href="index.html" style="color: white; background-color: teal;">
+                    <span class="nav-color">Lattitude</span>
+                </a>
+            </div>
+                
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Plots <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="max_temp.html">Temperature</a></li>
+                                <li><a href="humidity.html">Humidity</a></li>
+                                <li><a href="cloudiness.html">Cloud Cover</a></li>
+                                <li><a href="wind_speed.html">Wind Speed</a></li>
+                            </ul>
+                    </li>
+                    <li><a href="comparisons.html">Comparisons</a></li>
+                    <li><a href="data.html">Data</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-1"></div>
+
+            <div class="col-md-10">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <h2>Data</h2>
+                        <hr>
+                        <p class="text2">The following table includes all of the data used for plotting during this project.</p>
+                        <div class="col-md-12">
+                            <table class="table table-bordered table-hover table-condensed">
+                                <tbody>
+                                <td class="column_names">ID</td>
+                                <td class="column_names">City</td>
+                                <td class="column_names">Country Code</td>
+                                <td class="column_names">Latitude</td>
+                                <td class="column_names">Longitude</td>
+                                <td class="column_names">Temperature (F)</td>
+                                <td class="column_names">Humidity (%)</td>
+                                <td class="column_names">Cloudiness (%)</td>
+                                <td class="column_names">Wind Speed (mph)</td>
+                                <tr>
+                                <td>0</td>
+                                <td>albany</td>
+                                <td>au</td>
+                                <td>-35.02</td>
+                                <td>117.88</td>
+                                <td>65.56</td>
+                                <td>69</td>
+                                <td>24</td>
+                                <td>8.08</td>
+                                </tr>
+                                <tr>
+                                <td>1</td>
+                                <td>hobart</td>
+                                <td>au</td>
+                                <td>-42.88</td>
+                                <td>147.33</td>
+                                <td>69.8</td>
+                                <td>43</td>
+                                <td>0</td>
+                                <td>10.29</td>
+                                </tr>
+                                <tr>
+                                <td>2</td>
+                                <td>sulangan</td>
+                                <td>ph</td>
+                                <td>11.14</td>
+                                <td>123.72</td>
+                                <td>83.56</td>
+                                <td>100</td>
+                                <td>48</td>
+                                <td>9.98</td>
+                                </tr>
+                                <tr>
+                                <td>3</td>
+                                <td>east london</td>
+                                <td>za</td>
+                                <td>-33.02</td>
+                                <td>27.91</td>
+                                <td>68</td>
+                                <td>60</td>
+                                <td>0</td>
+                                <td>17.22</td>
+                                </tr>
+                                <tr>
+                                <td>4</td>
+                                <td>aklavik</td>
+                                <td>ca</td>
+                                <td>68.22</td>
+                                <td>-135.01</td>
+                                <td>28.4</td>
+                                <td>50</td>
+                                <td>20</td>
+                                <td>11.41</td>
+                                </tr>
+                                <tr>
+                                <td>5</td>
+                                <td>nome</td>
+                                <td>us</td>
+                                <td>30.04</td>
+                                <td>-94.42</td>
+                                <td>63.41</td>
+                                <td>68</td>
+                                <td>1</td>
+                                <td>5.95</td>
+                                </tr>
+                                <tr>
+                                <td>6</td>
+                                <td>thompson</td>
+                                <td>ca</td>
+                                <td>55.74</td>
+                                <td>-97.86</td>
+                                <td>21.2</td>
+                                <td>85</td>
+                                <td>90</td>
+                                <td>8.05</td>
+                                </tr>
+                                <tr>
+                                <td>7</td>
+                                <td>ushuaia</td>
+                                <td>ar</td>
+                                <td>-54.81</td>
+                                <td>-68.31</td>
+                                <td>40.27</td>
+                                <td>89</td>
+                                <td>56</td>
+                                <td>17.25</td>
+                                </tr>
+                                <tr>
+                                <td>8</td>
+                                <td>barrow</td>
+                                <td>us</td>
+                                <td>39.51</td>
+                                <td>-90.4</td>
+                                <td>56.64</td>
+                                <td>93</td>
+                                <td>90</td>
+                                <td>10.29</td>
+                                </tr>
+                                <tr>
+                                <td>9</td>
+                                <td>port lincoln</td>
+                                <td>au</td>
+                                <td>-34.72</td>
+                                <td>135.86</td>
+                                <td>66.82</td>
+                                <td>87</td>
+                                <td>8</td>
+                                <td>10.54</td>
+                                </tr>
+                                <tr>
+                                <td>10</td>
+                                <td>yellowknife</td>
+                                <td>ca</td>
+                                <td>62.45</td>
+                                <td>-114.38</td>
+                                <td>33.8</td>
+                                <td>59</td>
+                                <td>75</td>
+                                <td>6.93</td>
+                                </tr>
+                                <tr>
+                                <td>11</td>
+                                <td>tasiilaq</td>
+                                <td>gl</td>
+                                <td>65.61</td>
+                                <td>-37.64</td>
+                                <td>24.8</td>
+                                <td>79</td>
+                                <td>64</td>
+                                <td>2.24</td>
+                                </tr>
+                                <tr>
+                                <td>12</td>
+                                <td>ilulissat</td>
+                                <td>gl</td>
+                                <td>69.22</td>
+                                <td>-51.1</td>
+                                <td>24.8</td>
+                                <td>79</td>
+                                <td>88</td>
+                                <td>2.04</td>
+                                </tr>
+                                <tr>
+                                <td>13</td>
+                                <td>avarua</td>
+                                <td>ck</td>
+                                <td>-21.21</td>
+                                <td>-159.78</td>
+                                <td>80.6</td>
+                                <td>74</td>
+                                <td>75</td>
+                                <td>4.7</td>
+                                </tr>
+                                <tr>
+                                <td>14</td>
+                                <td>katsuura</td>
+                                <td>jp</td>
+                                <td>33.93</td>
+                                <td>134.5</td>
+                                <td>64.4</td>
+                                <td>93</td>
+                                <td>75</td>
+                                <td>8.05</td>
+                                </tr>
+                                <tr>
+                                <td>15</td>
+                                <td>rikitea</td>
+                                <td>pf</td>
+                                <td>-23.12</td>
+                                <td>-134.97</td>
+                                <td>77.53</td>
+                                <td>100</td>
+                                <td>76</td>
+                                <td>10.87</td>
+                                </tr>
+                                <tr>
+                                <td>16</td>
+                                <td>hasaki</td>
+                                <td>jp</td>
+                                <td>35.73</td>
+                                <td>140.83</td>
+                                <td>66.94</td>
+                                <td>68</td>
+                                <td>75</td>
+                                <td>10.29</td>
+                                </tr>
+                                <tr>
+                                <td>17</td>
+                                <td>vaini</td>
+                                <td>to</td>
+                                <td>-21.2</td>
+                                <td>-175.2</td>
+                                <td>82.4</td>
+                                <td>65</td>
+                                <td>20</td>
+                                <td>4.7</td>
+                                </tr>
+                                <tr>
+                                <td>18</td>
+                                <td>diamantino</td>
+                                <td>br</td>
+                                <td>-14.4</td>
+                                <td>-56.44</td>
+                                <td>71.32</td>
+                                <td>78</td>
+                                <td>0</td>
+                                <td>2.71</td>
+                                </tr>
+                                <tr>
+                                <td>19</td>
+                                <td>busselton</td>
+                                <td>au</td>
+                                <td>-33.64</td>
+                                <td>115.35</td>
+                                <td>65.74</td>
+                                <td>100</td>
+                                <td>48</td>
+                                <td>4.94</td>
+                                </tr>
+                                <tr>
+                                <td>20</td>
+                                <td>miquelon</td>
+                                <td>pm</td>
+                                <td>47.1</td>
+                                <td>-56.38</td>
+                                <td>35.86</td>
+                                <td>93</td>
+                                <td>0</td>
+                                <td>10.76</td>
+                                </tr>
+                                <tr>
+                                <td>21</td>
+                                <td>solnechnyy</td>
+                                <td>ru</td>
+                                <td>50.72</td>
+                                <td>136.64</td>
+                                <td>57.73</td>
+                                <td>53</td>
+                                <td>64</td>
+                                <td>5.84</td>
+                                </tr>
+                                <tr>
+                                <td>22</td>
+                                <td>agulu</td>
+                                <td>ng</td>
+                                <td>6.11</td>
+                                <td>7.07</td>
+                                <td>75.46</td>
+                                <td>93</td>
+                                <td>48</td>
+                                <td>7.63</td>
+                                </tr>
+                                <tr>
+                                <td>23</td>
+                                <td>punta arenas</td>
+                                <td>cl</td>
+                                <td>-53.16</td>
+                                <td>-70.91</td>
+                                <td>42.8</td>
+                                <td>70</td>
+                                <td>0</td>
+                                <td>9.17</td>
+                                </tr>
+                                <tr>
+                                <td>24</td>
+                                <td>kondinskoye</td>
+                                <td>ru</td>
+                                <td>59.65</td>
+                                <td>67.41</td>
+                                <td>40</td>
+                                <td>97</td>
+                                <td>68</td>
+                                <td>2.59</td>
+                                </tr>
+                                <tr>
+                                <td>25</td>
+                                <td>hilo</td>
+                                <td>us</td>
+                                <td>19.71</td>
+                                <td>-155.08</td>
+                                <td>67.5</td>
+                                <td>94</td>
+                                <td>90</td>
+                                <td>4.7</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-1"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p style="text-align: center">
+            <i>@Copyright Giorgia 2018</i>
+        </p>
+    </footer>
+
+</body>
+</html>
