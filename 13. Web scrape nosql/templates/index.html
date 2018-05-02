@@ -61,8 +61,8 @@
                       </tr>
                       {% for fact in mars_info.facts %}
                       <tr>
-                          <td align="left">{{fact.des}}</td>
-                          <td align="right">{{fact.mes}}</td>
+                          <td align="left">{{fact['Characteristic']}}</td>
+                          <td align="right">{{fact['Measurement']}}</td>
                       </tr>  
                       {% endfor %}
                     </table>

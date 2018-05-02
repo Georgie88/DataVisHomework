@@ -69,7 +69,8 @@ def scrape():
 
     mars_fact_df.head()
 
-    mars_html = mars_fact_df.to_html
+    mars_html = mars_fact_df.to_html(index=None)
+    print(mars_html)
 
     #Scrape USGS Astrogeology site here to obtain high resolution images for each of Mar's hemispheres
     url = "https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars"
@@ -126,6 +127,8 @@ def scrape():
     mars_info["weather"] = mars_weather
     mars_info["facts"] = mars_html
     mars_info["hemispheres"] = hemisphere_image_urls
+
+    print(mars_info)
 
     return mars_info
 
