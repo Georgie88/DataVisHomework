@@ -5,13 +5,12 @@ from bs4 import BeautifulSoup
 import pandas as pd
 from selenium import webdriver
 
-#browser = Browser('chrome', headless=False)
-
 def scrape():
 
+    #initializing the browser
     browser = Browser('chrome', headless=False)
 
-    #Scrape the NASA Mars News Site
+    #Scrape the NASA Mars News Site for the news
     url = "https://mars.nasa.gov/news/"
     browser.visit(url)
     time.sleep(1)
@@ -19,6 +18,7 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, "lxml")
 
+    #extracting the title and the paragraph from the latest news
     title = soup.find_all("div", class_="content_title") #("div", class_="content_title").next_element.get_text()
     news_title = title[0].next_element.text.strip()
     paragraph = soup.find_all("div", class_="article_teaser_body")
@@ -34,7 +34,8 @@ def scrape():
 
     html = browser.html
     soup = BeautifulSoup(html, 'lxml')
-
+    
+    #capturing the image URL
     image = soup.find('a', class_='button fancybox')
     featured_image_url = "https://www.jpl.nasa.gov" + image["data-fancybox-href"]
 
@@ -48,8 +49,10 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'lxml')
 
+    #scraping the tweets to get the weather infrmation
     weather = soup.find_all('p', class_='TweetTextSize TweetTextSize--normal js-tweet-text tweet-text')
 
+    #from the results obtained (weather) keeping only the newest one and leaving the others
     for i in weather:
         j = i.text.split()
         if j[0] != "Sol":
@@ -68,7 +71,7 @@ def scrape():
     mars_table_df = mars_table[0]
     mars_table_df.columns = ["Characteristic", "Measurement"]
 
-    # create a blank dictionary and fill it with data
+    #creating a blank list to fill with the data
     mars_dict_list = []
 
     for i in range(0, len(mars_table_df)):
@@ -84,11 +87,13 @@ def scrape():
     html = browser.html
     soup = BeautifulSoup(html, 'lxml')
 
+    #creating empty lists to store the information of every image
     url_list = []
     title_list =[]
     jpg_url_list =[]
     hemisphere_image_urls = []
 
+    #scraping the different web pages to obtain all the information necessary to store in a dictionnary
     results = soup.find('div', class_="collapsible results")
     links = results.find_all('a', class_="itemLink product-item")
     titles= results.find_all('h3')
