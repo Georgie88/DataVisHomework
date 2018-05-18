@@ -8,10 +8,10 @@ var gauge = document.getElementById("gauge");
 d3.json("/names", function(error, response) {
     if (error) return console.log(error);
 
-    // console.log(response);
+    console.log(response);
 
     var items = response;
-    // console.log(items);
+    console.log(items);
 
     for (var i = 0; i < items.length; i++) {
 
@@ -32,14 +32,14 @@ function init() {
     d3.json("/metadata/BB_940", function(error, response) {
         if (error) return console.log(error);
 
-        // console.log(response);
+        console.log(response);
 
         var keys = Object.keys(response);
-        // console.log(keys);
+        console.log(keys);
 
         for (var i = 0; i < keys.length; i++) {
             var p = document.createElement("p");
-            p.innerHTML = '{keys[i]}: {response[keys[i]]}';
+            p.innerHTML = `${keys[i]}: ${response[keys[i]]}`;
 
             sampleMetadata.appendChild(p);
         };
@@ -226,23 +226,23 @@ function updateChart(newGauge) {
 function optionChanged(dataset) {
 
     // Update metadata
-    var dataURL = `/metadata/{dataset}`;
+    var dataURL = '/metadata/' + dataset;
     d3.json(dataURL, function(error, response) {
         if (error) return console.log(error);
 
-        $sampleMetadata.innerHTML = "";
+        sampleMetadata.innerHTML = "";
 
         var keys = Object.keys(response);
 
         for (var i = 0; i < keys.length; i++) {
             var p = document.createElement("p");
-            p.innerHTML = `{keys[i]}: {response[keys[i]]}`;
+            p.innerHTML = `${keys[i]}: ${response[keys[i]]}`;
             sampleMetadata.appendChild(p);
         };
     });
 
     // Update pie & bubble plots
-    var plotURL = `/samples/{dataset}`;
+    var plotURL = '/samples/' + dataset;
     d3.json(plotURL, function(error, response) {
         if (error) return console.log(error);
 
@@ -252,7 +252,9 @@ function optionChanged(dataset) {
 
         // Data slices
         var idSlice = response.otu_ids.slice(0,10);
+        console.log(idSlice);
         var valueSlice = response.sample_values.slice(0,10);
+        console.log(valueSlice);
 
         // Pie data
         var pieIds = [];
@@ -299,7 +301,7 @@ function optionChanged(dataset) {
     });
 
     // Update gauge chart
-    var chartURL = `/wfreq/{dataset}`;
+    var chartURL = '/wfreq/' + dataset;
     d3.json(chartURL, function(error, response) {
         if (error) console.log(error)
 

@@ -39,6 +39,8 @@ def names():
     for result in results:
         sample_ids.append("BB_" + str(result[0]))
 
+    #print(sample_ids)
+
     return jsonify(sample_ids)
 
 # Returns a list of OTU descriptions
@@ -55,11 +57,15 @@ def otu():
     for result in results:
         otu_desc.append(result[0])
 
+    #print(otu_desc)
+
     return jsonify(otu_desc)
 
 # Returns a json dictionary of sample metadata
 @app.route("/metadata/<sample>")
 def metadata(sample):
+
+    print(sample)
     
     # Grab input
     sample_id = int(sample.split("_")[1])
